@@ -18,7 +18,7 @@ x = b
 y = c
 z = d
 e = [w, x, y, z]
-def threadtarget(e):
+def solve(e):
  numbers = random.shuffle(e)
  print(e)
  a = e[0]
@@ -85,6 +85,4 @@ def threadtarget(e):
  except ZeroDivisionError:
      pass
  
-threading.Thread(target = threadtarget(e), daemon=True).start
-threading.Thread(target = threadtarget(e), daemon=True).start
-threading.Thread(target = threadtarget(e), daemon=True).start
+solve(e)
