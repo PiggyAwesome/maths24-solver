@@ -18,24 +18,23 @@ x = b
 y = c
 z = d
 e = [w, x, y, z]
-def solve(e):
- numbers = random.shuffle(e)
- print(e)
- a = e[0]
- b = e[1]
- c = e[2]
- d = e[3]
- 
- 
- x1 = random.choice('+-*/')
- x2 = random.choice('+-*/')
- x3 = random.choice('+-*/')
- try:
+numbers = random.shuffle(e)
+print(e)
+a = e[0]
+b = e[1]
+c = e[2]
+d = e[3]
+
+
+x1 = random.choice('+-*/')
+x2 = random.choice('+-*/')
+x3 = random.choice('+-*/')
+try:
   math = eval(f"{a} {x1} {b} {x2}{c} {x3} {d}")
   sum = str(f"{a} {x1} {b} {x2} {c} {x3} {d}")
- except ZeroDivisionError:
+except ZeroDivisionError:
      pass
- try:
+try:
   number = 1
   while math != 24:
       print(colored(252, 3, 224,f"Try Number: ") + colored(200, 1, 500,f"{number} ") + colored(240, 246, 175, f"| {sum} = {math}"))
@@ -82,7 +81,7 @@ def solve(e):
           exit()
   print("\n\n"+sum + " = " + str(math))
   print(colored(100, 91, 244,(f'Found Awnser on attempt {number}\n\n🔥 ') + colored(240, 246, 175,('https://github.com/PiggyAwesome 🔥'))))
- except ZeroDivisionError:
+  except ZeroDivisionError:
      pass
  
-solve(e)
+
